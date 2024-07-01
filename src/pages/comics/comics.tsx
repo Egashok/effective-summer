@@ -18,7 +18,13 @@ export const Comics = () => {
       </div>
       <div className="comics__items">
         {comicsArray.map((c) => (
-          <ListItem Image={c.Image} title={c.title} description={c.description} />
+          <ListItem
+            id={c.id}
+            Image={c.Image}
+            entity="comics"
+            title={c.title}
+            description={c.description}
+          />
         ))}
       </div>
       <Footer />

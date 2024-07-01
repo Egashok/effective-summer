@@ -19,7 +19,13 @@ export const Caharacters = () => {
       </div>
       <div className="characters__items">
         {charactersArray.map((c) => (
-          <ListItem Image={c.Image} title={c.title} description={c.description} />
+          <ListItem
+            id={c.id}
+            Image={c.Image}
+            title={c.title}
+            entity="characters"
+            description={c.description}
+          />
         ))}
       </div>
       <Footer />
