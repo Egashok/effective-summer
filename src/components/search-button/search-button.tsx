@@ -1,11 +1,14 @@
-import './search-button.scss'
-
+import './search-button.scss';
 
 export const SearchButton = () => {
-    return ( 
-       <button  className="search__button">
-        Search
-       </button>
-     );
-}
- 
+  return (
+    <button
+      onClick={() => {
+        //логика поиска
+      }}
+      className="search__button"
+    >
+      Search
+    </button>
+  );
+};

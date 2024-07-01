@@ -3,37 +3,25 @@ import { Header } from '../../components/header';
 import { ListItem } from '../../components/list-item';
 import { SearchButton } from '../../components/search-button';
 import { SearchInput } from '../../components/search-input';
-import ThreeD from '../../assets/3d.jpg'
-import './comics.scss'
+import { comicsArray } from '../../store/mockInit';
+import './comics.scss';
 export const Comics = () => {
-    return ( 
-      <div className='characters'>
-         <Header/>
-        <h2 className="characters__title">Comics<span className='characters__count'>(13000)</span></h2>
-<div className="characters__field">
-  <SearchInput placeholder='Search Characters by name'/>
-  <SearchButton/>
-</div>
-        <div className="characters__items">
-          <ListItem Image={ThreeD } title='Трехмерный человек' description='Трехмерный человек был героем 1950-х, появившемся благодаря слиянию двух братьев - Хэла и Чака Чандлеров, и последующем слиянии с Делроем Гарреттом Младшим.'/>
-          <ListItem Image={ThreeD } title='Трехмерный человек' description='Трехмерный человек был героем 1950-х, появившемся благодаря слиянию двух братьев - Хэла и Чака Чандлеров, и последующем слиянии с Делроем Гарреттом Младшим.'/>
-          <ListItem Image={ThreeD } title='Трехмерный человек' description='Трехмерный человек был героем 1950-х, появившемся благодаря слиянию двух братьев - Хэла и Чака Чандлеров, и последующем слиянии с Делроем Гарреттом Младшим.'/>
-          <ListItem Image={ThreeD } title='Трехмерный человек' description='Трехмерный человек был героем 1950-х, появившемся благодаря слиянию двух братьев - Хэла и Чака Чандлеров, и последующем слиянии с Делроем Гарреттом Младшим.'/>
-          <ListItem Image={ThreeD } title='Трехмерный человек' description='Трехмерный человек был героем 1950-х, появившемся благодаря слиянию двух братьев - Хэла и Чака Чандлеров, и последующем слиянии с Делроем Гарреттом Младшим.'/>
-          <ListItem Image={ThreeD } title='Трехмерный человек' description='Трехмерный человек был героем 1950-х, появившемся благодаря слиянию двух братьев - Хэла и Чака Чандлеров, и последующем слиянии с Делроем Гарреттом Младшим.'/>
-          <ListItem Image={ThreeD } title='Трехмерный человек' description='Трехмерный человек был героем 1950-х, появившемся благодаря слиянию двух братьев - Хэла и Чака Чандлеров, и последующем слиянии с Делроем Гарреттом Младшим.'/>
-          <ListItem Image={ThreeD } title='Трехмерный человек' description='Трехмерный человек был героем 1950-х, появившемся благодаря слиянию двух братьев - Хэла и Чака Чандлеров, и последующем слиянии с Делроем Гарреттом Младшим.'/>
-         
-          <ListItem Image={ThreeD } title='Трехмерный человек' description='Трехмерный человек был героем 1950-х, появившемся благодаря слиянию двух братьев - Хэла и Чака Чандлеров, и последующем слиянии с Делроем Гарреттом Младшим.'/>
-          <ListItem Image={ThreeD } title='Трехмерный человек' description='Трехмерный человек был героем 1950-х, появившемся благодаря слиянию двух братьев - Хэла и Чака Чандлеров, и последующем слиянии с Делроем Гарреттом Младшим.'/>
-   
-          <ListItem Image={ThreeD } title='Трехмерный человек' description='Трехмерный человек был героем 1950-х, появившемся благодаря слиянию двух братьев - Хэла и Чака Чандлеров, и последующем слиянии с Делроем Гарреттом Младшим.'/>
-          <ListItem Image={ThreeD } title='Трехмерный человек' description='Трехмерный человек был героем 1950-х, появившемся благодаря слиянию двух братьев - Хэла и Чака Чандлеров, и последующем слиянии с Делроем Гарреттом Младшим.'/>
-   
-       
-        </div>
-       <Footer/>
+  return (
+    <div className="comics">
+      <Header />
+      <h2 className="comics__title">
+        Comics<span className="comics__count">(13000)</span>
+      </h2>
+      <div className="comics__field">
+        <SearchInput placeholder="Search comics by name" />
+        <SearchButton />
       </div>
-     );
-}
- 
+      <div className="comics__items">
+        {comicsArray.map((c) => (
+          <ListItem Image={c.Image} title={c.title} description={c.description} />
+        ))}
+      </div>
+      <Footer />
+    </div>
+  );
+};

@@ -1,11 +1,17 @@
-.list__item {
-    border: 1px solid black;
-    width: 200px;
-    height: 200px;
-    color: black;
-    margin-right: 40px;
-}
-.list__img {
-    width: 200px;
-    height: 100px;
+.list {
+    &__item {
+        border: 1px solid black;
+        max-width: 300px;
+        height: 300px;
+        color: black;
+        margin-right: 40px;
+    }
+    &__img {
+        width: 300px;
+        height: 150px;
+    }
+    &__title {
+        color: red;
+        font-weight: 600;
+    }
 }
