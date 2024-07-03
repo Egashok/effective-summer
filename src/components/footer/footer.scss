@@ -1,0 +1,18 @@
+.footer {
+    &__content {
+        background-color: gray;
+        padding: 20px;
+        color: white;
+        position: relative;
+    }
+    &__logo {
+        width: 64px;
+    }
+    &__license {
+        margin: 0;
+    }
+    &__link {
+        text-decoration: none;
+        color: white;
+    }
+}
